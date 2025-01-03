@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map, Filter, and Reduce in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-section {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px 0;
+        }
+
+        .code-section pre {
+            margin: 0;
+        }
+
+        .note {
+            background: #e9f7df;
+            padding: 10px 15px;
+            border-left: 5px solid #28a745;
+            border-radius: 3px;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Array Methods and Object Example</h1>
+    <div class="container">
+        <div class="note">
+            <strong>Note:</strong> This example demonstrates JavaScript's powerful array methods like <code>map</code>, <code>filter</code>, and <code>reduce</code>, as well as object manipulation and async operations.
+        </div>
+
+        <div class="code-section">
+            <pre>
+const numbers = [1, 2, 3, 4, 5, 6];
+const squares = numbers.map(element => Math.pow(element, 2));
+const cubes = numbers.map(element => Math.pow(element, 3));
+
+console.log("Squares:", squares);
+console.log("Cubes:", cubes);
+
+const evenNumbers = cubes.filter(element => element % 2 === 0);
+const oddNumbers = cubes.filter(element => element % 2 !== 0);
+
+console.log("Even Cubes:", evenNumbers);
+console.log("Odd Cubes:", oddNumbers);
+
+const totalSum = numbers.reduce((accumulator, element) => accumulator + element, 0);
+console.log("Total Sum:", totalSum);
+
+const ages = [16, 17, 18, 19, 20, 35, 60];
+const adults = ages.filter(age => age >= 18);
+const children = ages.filter(age => age < 18);
+
+console.log("Adults:", adults);
+console.log("Children:", children);
+
+const person = {
+    firstName: "Tony",
+    lastName: "Popakorn",
+    age: 23,
+    isEmployee: true,
+    work() {
+        console.log("Working at TCS");
+    },
+    eat() {
+        console.log("Not eating right now");
+    },
+    travel: () => {
+        console.log("Not traveling at the moment");
+    }
+};
+
+console.log("Person Details:");
+console.log("First Name:", person.firstName);
+console.log("Last Name:", person.lastName);
+console.log("Age:", person.age);
+console.log("Is Employee:", person.isEmployee);
+person.work();
+person.eat();
+person.travel();
+
+setTimeout(() => {
+    console.log("Hello!");
+    console.log("I am a young boy.");
+}, 3000);
+            </pre>
+        </div>
+    </div>
+    <footer>
+        © 2025 JavaScript Examples. All Rights Reserved.
+    </footer>
+</body>
+</html>
